@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="stock"
+            type="com.tmhnry.swade.model.Stock" />
+
+        <variable
+            name="handler"
+            type="com.tmhnry.swade.viewhandler.OrderRowHandler" />
+    </data>
+
+    <TableRow
+        android:gravity="center_vertical"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@{stock.name}"
+            android:textColor="@color/gray_900"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+<!--        android:onClick="@{(view) -> handler.onStockDecrement(stock)}"-->
+        <ImageView
+            android:id="@+id/dec_stock"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_column="1"
+            android:src="@drawable/icons8_minus_24"
+            android:onClick="@{(view) -> handler.onStockDecrement(context, stock, quantity, sub)}"/>
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_column="2"
+            android:gravity="center"
+            android:maxWidth="40dp"
+            android:text="@{String.valueOf(stock.quantityOrdered)}"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/inc_stock"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_column="3"
+            android:src="@drawable/icons8_plus_24"
+            android:onClick="@{(view) -> handler.onStockIncrement(context, stock, quantity, sub)}"/>
+
+        <TextView
+            android:layout_column="4"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:paddingHorizontal="28dp"
+            android:text='@{String.format("%.2f", stock.price)}'
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sub"
+            android:layout_column="5"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:paddingHorizontal="28dp"
+            android:text='@{String.format("%.2f", stock.price * stock.quantityOrdered)}'
+            android:textSize="12sp" />
+    </TableRow>
+</layout>

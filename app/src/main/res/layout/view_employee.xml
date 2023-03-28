@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/header_emp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/body_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_white"
+        android:paddingVertical="8dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/gray"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+           app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/img_profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/img_avatar" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/txt_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center"
+            android:text="UNTRACKED"
+            android:textColor="#fb7632"
+            android:textSize="9sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            app:layout_constraintStart_toEndOf="@id/img_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/RobotoBoldTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3786fb"
+                android:textSize="12sp"
+                tools:text="Mark Lemuel Genita" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/customers_served"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#aaaaaa"
+                android:textSize="11sp"
+                android:text="21 served customers" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="12dp"
+                    android:outlineAmbientShadowColor="@color/black"
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:translationZ="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_add_hour"
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:background="@drawable/button_light_red"
+                        android:src="@drawable/ic_baseline_add_alarm_16"
+                        android:tint="#fe6f6c"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_add_stock"
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/btn_add_hour"
+                        android:background="@drawable/button_light_blue"
+                        android:src="@drawable/ic_baseline_add_shopping_cart_16"
+                        android:tint="#a0bffe"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:gravity="end">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="18sp"-->
+                <!--                        android:layout_height="18sp"-->
+                <!--                        android:layout_marginEnd="10dp"-->
+                <!--                        android:src="@drawable/icons8_share_50"-->
+                <!--                        app:tint="#7002" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="18sp"-->
+                <!--                        android:layout_height="18sp"-->
+                <!--                        android:src="@drawable/icons8_speech_bubble_50"-->
+                <!--                        app:tint="#7002" />-->
+                <!--                </LinearLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/checkbox_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/separator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/footer_emp"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/segoe_ui_italic"
+        android:gravity="center"
+        android:text="End"
+        android:textColor="@color/transparent"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content">-->
+
+    <!--    <View-->
+    <!--        android:id="@+id/header_emp"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:visibility="gone" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/body_emp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="16dp"-->
+    <!--        android:layout_marginVertical="8dp"-->
+    <!--        android:background="@drawable/card_white"-->
+    <!--        android:elevation="12dp"-->
+    <!--        android:outlineAmbientShadowColor="@color/black"-->
+    <!--        android:outlineSpotShadowColor="@color/gray"-->
+    <!--        android:paddingHorizontal="10dp"-->
+    <!--        android:paddingVertical="10dp">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img_profile"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:layout_alignParentStart="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginHorizontal="30dp"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            tools:src="@drawable/img_avatar" />-->
+
+    <!--        <TextView-->
+    <!--            android:visibility="gone"-->
+    <!--            android:id="@+id/txt_monitor"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/img_profile"-->
+    <!--            android:layout_alignStart="@id/img_profile"-->
+    <!--            android:layout_alignEnd="@id/img_profile"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:fontFamily="@font/segoe_ui_bold"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="UNTRACKED"-->
+    <!--            android:textColor="#fb7632"-->
+    <!--            android:textSize="9sp" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_toEndOf="@id/img_profile"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txt_name"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="18sp"-->
+    <!--                tools:text="Mark Lemuel Genita" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txt_department"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="4dp"-->
+    <!--                android:textColor="#aaaaaa"-->
+    <!--                android:textSize="11sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:text="Driver" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txt_join_date"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="4dp"-->
+    <!--                android:textColor="#aaaaaa"-->
+    <!--                android:textSize="11sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:text="Driver" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="16dp"-->
+    <!--                android:baselineAligned="false"-->
+    <!--                android:gravity="center_vertical">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:elevation="12dp"-->
+    <!--                    android:outlineAmbientShadowColor="@color/black"-->
+    <!--                    android:outlineSpotShadowColor="@color/gray"-->
+    <!--                    android:translationZ="16dp">-->
+
+    <!--                    <androidx.appcompat.widget.AppCompatImageButton-->
+    <!--                        android:visibility="gone"-->
+    <!--                        android:id="@+id/btn_add_hour"-->
+    <!--                        android:layout_width="24sp"-->
+    <!--                        android:layout_height="24sp"-->
+    <!--                        android:background="@drawable/button_light_red"-->
+    <!--                        android:src="@drawable/ic_baseline_add_alarm_16"-->
+    <!--                        android:tint="#fe6f6c" />-->
+
+    <!--                    <androidx.appcompat.widget.AppCompatImageButton-->
+    <!--                        android:visibility="gone"-->
+    <!--                        android:id="@+id/btn_add_stock"-->
+    <!--                        android:layout_width="24sp"-->
+    <!--                        android:layout_height="24sp"-->
+    <!--                        android:layout_marginStart="12dp"-->
+    <!--                        android:layout_toEndOf="@id/btn_add_hour"-->
+    <!--                        android:background="@drawable/button_light_blue"-->
+    <!--                        android:tint="#a0bffe"-->
+    <!--                        android:src="@drawable/ic_baseline_add_shopping_cart_16" />-->
+    <!--                </RelativeLayout>-->
+
+    <!--                &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--                &lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                    android:layout_weight="1"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                    android:gravity="end">&ndash;&gt;-->
+
+    <!--                &lt;!&ndash;                    <ImageView&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:layout_width="18sp"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:layout_height="18sp"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:layout_marginEnd="10dp"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:src="@drawable/icons8_share_50"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        app:tint="#7002" />&ndash;&gt;-->
+
+    <!--                &lt;!&ndash;                    <ImageView&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:layout_width="18sp"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:layout_height="18sp"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        android:src="@drawable/icons8_speech_bubble_50"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                        app:tint="#7002" />&ndash;&gt;-->
+    <!--                &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/checkbox_delete"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:button="@drawable/checkbox"-->
+    <!--            android:fontFamily="@font/segoe_ui"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:textColor="@color/gray"-->
+    <!--            android:textSize="12sp" />-->
+    <!--    </RelativeLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/footer_emp"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="54dp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:fontFamily="@font/segoe_ui_italic"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="End"-->
+    <!--        android:textColor="@color/gray"-->
+    <!--        android:textSize="12sp"-->
+    <!--        android:visibility="gone" />-->
+
+    <!--</RelativeLayout>-->

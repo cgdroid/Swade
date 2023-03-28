@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.DepartmentSetupFragment">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/department_setup_toolbar"
+        android:elevation="12dp"
+        android:gravity="center_vertical"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/gray"
+        android:paddingHorizontal="32dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="All Departments"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="18sp"
+            android:layout_height="18sp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icons8_search_50"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="18sp"
+            android:layout_height="18sp"
+            android:src="@drawable/icons8_trash_50"
+            app:tint="@color/black" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:horizontalSpacing="14dp"
+        android:numColumns="2"
+        android:paddingHorizontal="16dp"
+        android:verticalSpacing="14dp" />
+
+<!--    <LinearLayout-->
+<!--        android:background="@color/white"-->
+<!--        android:id="@+id/page_loader"-->
+<!--        android:clickable="true"-->
+<!--        android:layout_alignTop="@id/grid_view"-->
+<!--        android:layout_alignBottom="@id/grid_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:orientation="vertical">-->
+<!--        <pl.droidsonroids.gif.GifImageView-->
+<!--            android:layout_width="64dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:src="@drawable/icons8_restart"/>-->
+<!--        <TextView-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Retrieving Data..."/>-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/wrapper_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/confirm_delete"
+        android:elevation="12dp"
+        android:gravity="center_vertical"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/gray"
+        android:paddingHorizontal="14dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icons8_trash" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrapper_guider"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_above="@+id/img_add"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/department_count"
+        android:elevation="12dp"
+        android:gravity="center_vertical"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/gray"
+        android:paddingHorizontal="14dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/giv_guider"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icons8_reddit" />
+
+        <TextView
+            android:id="@+id/txt_guider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/3"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_add"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/home_navigation"
+        android:elevation="12dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="#e45912"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:tint="@color/white" />
+
+</RelativeLayout>

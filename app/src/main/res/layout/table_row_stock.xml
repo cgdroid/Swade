@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="stock"
+            type="com.tmhnry.swade.model.Stock" />
+    </data>
+
+    <TableRow
+        android:background="@drawable/table_row_border"
+        android:gravity="center_vertical"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@{stock.name}"
+            android:textColor="#a3a3a3"
+            android:textSize="12sp" />
+        <!--        android:onClick="@{(view) -> handler.onStockDecrement(stock)}"-->
+        <TextView
+            android:layout_column="1"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxWidth="35dp"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text='@{String.format("₱%.0f", stock.netIncome)}'
+            android:textColor="#a3a3a3"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2">
+
+            <View
+                android:id="@+id/stock_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:background="#4285f5" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_column="3"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxWidth="45dp"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text='@{String.format("%.2f%s", stock.getRelativeRevenue() * 100, "%")}'
+            android:textColor="#a3a3a3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_column="4"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxWidth="35dp"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text='@{String.valueOf(stock.quantitySold)}'
+            android:textColor="#a3a3a3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_column="5"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="45dp"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text="N/A"
+            android:textColor="#a3a3a3"
+            android:textSize="12sp" />
+    </TableRow>
+</layout>

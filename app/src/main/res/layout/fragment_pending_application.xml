@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="64dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_shopee" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Application"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You're application has been sent. Please wait for the response."
+            android:textColor="@color/black"/>
+
+        <pl.droidsonroids.gif.GifTextView
+            android:visibility="gone"
+            android:id="@+id/gtv_add_departments"
+            android:layout_width="wrap_content"
+            android:layout_height="24sp"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:drawableEnd="@drawable/icons8_forward_24"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="Add Departments"
+            android:textColor="#dd006aff"
+            android:textSize="12sp" />
+
+        <!--            <androidx.appcompat.widget.AppCompatButton-->
+        <!--                android:id="@+id/btn_register"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginHorizontal="16dp"-->
+        <!--                android:layout_marginTop="40dp"-->
+        <!--                android:background="@drawable/button_gray"-->
+        <!--                android:text="Register"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="16sp" />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_gray"
+            android:text="Refresh"
+            android:textAllCaps="false"
+            android:textColor="#9e9e9e"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="64dp" />
+    </LinearLayout>
+</FrameLayout>
+

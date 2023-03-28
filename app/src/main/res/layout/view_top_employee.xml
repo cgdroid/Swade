@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/header_emp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/body_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_white"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/gray"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/img_avatar" />
+
+        <TextView
+            android:id="@+id/txt_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center"
+            android:text="UNTRACKED"
+            android:textColor="#fb7632"
+            android:textSize="9sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_profile"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/RobotoBoldTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3786fb"
+                android:textSize="12sp"
+                tools:text="Mark Lemuel Genita" />
+
+            <TextView
+                android:id="@+id/customers_served"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21 served customers"
+                android:textColor="#aaaaaa"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/profit_generated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21 served customers"
+                android:textColor="#aaaaaa"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/revenue_generated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21 served customers"
+                android:textColor="#aaaaaa"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/revenue_per_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21 served customers"
+                android:textColor="#aaaaaa"
+                android:textSize="11sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="12dp"
+                    android:outlineAmbientShadowColor="@color/black"
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:translationZ="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_add_hour"
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:background="@drawable/button_light_red"
+                        android:src="@drawable/ic_baseline_add_alarm_16"
+                        android:tint="#fe6f6c"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_add_stock"
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/btn_add_hour"
+                        android:background="@drawable/button_light_blue"
+                        android:src="@drawable/ic_baseline_add_shopping_cart_16"
+                        android:tint="#a0bffe"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:gravity="end">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="18sp"-->
+                <!--                        android:layout_height="18sp"-->
+                <!--                        android:layout_marginEnd="10dp"-->
+                <!--                        android:src="@drawable/icons8_share_50"-->
+                <!--                        app:tint="#7002" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="18sp"-->
+                <!--                        android:layout_height="18sp"-->
+                <!--                        android:src="@drawable/icons8_speech_bubble_50"-->
+                <!--                        app:tint="#7002" />-->
+                <!--                </LinearLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/score"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23%"
+            android:textColor="#aaaaaa"
+            android:textSize="11sp" />
+
+
+
+
+        <CheckBox
+            android:id="@+id/checkbox_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/footer_emp"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/segoe_ui_italic"
+        android:gravity="center"
+        android:text="End"
+        android:textColor="@color/transparent"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
